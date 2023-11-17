@@ -62,3 +62,5 @@ The example video was sourced from: [Fire: Fountaingrove in Santa Rosa (Monday, 
 :link: [Robert Li](https://github.com/mediolanum1)
 
 :link: [Emilio Soriano Chávez](https://github.com/ami-sc)
+
+This project was made as part of the 2023 AI Lab: Computer Vision and NLP course at Sapienza Università di Roma.
