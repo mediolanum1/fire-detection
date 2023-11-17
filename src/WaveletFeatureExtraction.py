@@ -1,6 +1,15 @@
+"""
+**Wavelet Feature Extraction**
+
+Performs a Wavelet Decomposition of the RGB and HSV channels of a given image,
+and generates features given each coefficient of the decomposition.
+"""
+
+
 import cv2
 import pywt
 import numpy as np
+
 
 def getWaveletFeatures(img):
 
@@ -26,25 +35,25 @@ def getWaveletFeatures(img):
     for hist in img_hists:
 
         # Get the first (most relevant) wavelet coefficient.
-        coeff = pywt.wavedec(hist, "db20")[0]
+        wav_coefficient = pywt.wavedec(hist, "db20")[0]
 
-        # Get features for the coewfficient.
-        img_features += getCoefficientFeatures(coeff)
+        # Get features for the coefficient.
+        img_features += getCoefficientFeatures(wav_coefficient)
 
     return img_features
 
-def getCoefficientFeatures(coeff):
 
-    n5 = np.nanpercentile(coeff, 5)
-    n25 = np.nanpercentile(coeff, 25)
-    n75 = np.nanpercentile(coeff, 75)
-    n95 = np.nanpercentile(coeff, 95)
+def getCoefficientFeatures(wav_coefficient):
 
-    median = np.nanpercentile(coeff, 50)
-    mean = np.nanmean(coeff)
-    std = np.nanstd(coeff)
-    var = np.nanvar(coeff)
-    rms = np.nanmean(np.sqrt(coeff**2))
+    n5 = np.nanpercentile(wav_coefficient, 5)
+    n25 = np.nanpercentile(wav_coefficient, 25)
+    n75 = np.nanpercentile(wav_coefficient, 75)
+    n95 = np.nanpercentile(wav_coefficient, 95)
+
+    median = np.nanpercentile(wav_coefficient, 50)
+    mean = np.nanmean(wav_coefficient)
+    std = np.nanstd(wav_coefficient)
+    var = np.nanvar(wav_coefficient)
+    rms = np.nanmean(np.sqrt(wav_coefficient**2))
 
     return [n5, n25, n75, n95, median, mean, std, var, rms]
-
