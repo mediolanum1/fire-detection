@@ -19,9 +19,11 @@ We use a Motion Detection Algorithm that uses a **background subtraction** metho
 
 ![Motion Detection Algorithm](/figures/motion_detection_algorithm.png)
 
-The used model is an XGBoost model pre-trained on labeled image datasets containing fire and non-fire images. A histogram was computed for the color channels to differentiate without using the entire images.
+The used model is an **XGBoost model** pre-trained on labeled image datasets containing fire and non-fire images. A histogram was computed for the color channels to differentiate without using the entire images.
 
 ![Model Training](/figures/model_training.png)
+
+Additional details can be found in the [Technical Report](/reports/Technical_Report.pdf) and in the [Project Slides](/reports/Project_Slides.pdf).
 
 ## Installation
 
