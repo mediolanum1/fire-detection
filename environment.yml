@@ -1,0 +1,16 @@
+name: FireDetection
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - pysimplegui
+  - ca-certificates
+  - openssl
+  - opencv
+  - xgboost
+  - pandas
+  - pywavelets
+  - bayesian-optimization
+  - scikit-learn
+  - matplotlib
