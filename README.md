@@ -27,13 +27,13 @@ Additional details can be found in the [Technical Report](/reports/Technical_Rep
 
 ## Installation
 
-First, create a `conda` environment using:
+First, create a new `conda` environment using:
 
 ```sh
-conda create --name FireDetection --file requirements.txt
+conda env create -f environment.yml
 ```
 
-Activate the environment using:
+Activate the new environment using:
 
 ```sh
 conda activate FireDetection
