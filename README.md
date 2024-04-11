@@ -57,7 +57,7 @@ The example video was sourced from: [Fire: Fountaingrove in Santa Rosa (Monday, 
 
 ## Authors
 
-:link: [Alessio Olivieri](https://github.com/Lexyo14)
+:link: [Alessio Olivieri](https://github.com/Alessio-Olivieri)
 
 :link: [Robert Li](https://github.com/mediolanum1)
 
